@@ -6,9 +6,9 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "spotlight"
     gem.summary = %Q{TODO}
-    gem.email = "rtec88@gmail.com"
+    gem.email = "spotlight@attackcorp.com"
     gem.homepage = "http://github.com/attack/spotlight"
-    gem.authors = ["Mark"]
+    gem.authors = ["Mark G"]
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

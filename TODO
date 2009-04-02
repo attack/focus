@@ -1,0 +1,4 @@
+- custom errors
+- timeout after X seconds (does httparty provide this?)
+- alternate ip_lookup providers
+- logging in development environment

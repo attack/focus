@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+ 
+require File.dirname(__FILE__) + '/../lib/spotlight'
+ 
+if ARGV.size == 0
+  puts 'Spotlight [Powered by hostip.info]'
+  puts 'USAGE: spotlight [ip_address]'
+  puts 'EXAMPLES:'
+  puts ' spotlight 209.85.171.100'
+  exit
+end
+ 
+spotlight = Spotlight.new(ARGV[0])
+
+puts "location -- name: #{spotlight.location.name}, latitude: #{spotlight.location.latitude}, longitude: #{spotlight.location.longitude}"
+puts "country  -- name: #{spotlight.country.name}, code: #{spotlight.country.code}"

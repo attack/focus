@@ -1,4 +1,4 @@
-= spotlight
+= focus
 
 A simple interface to the www.hostip.info API.
 
@@ -23,30 +23,30 @@ that you download the entire database from them instead.
 
 == from the command line
 
- # spotlight 209.85.171.100
+ # focus 209.85.171.100
 
 == from a ruby script
 
  require 'rubygems'
- require 'spotlight'
+ require 'focus'
  
- spotlight = Spotlight.new("209.85.171.100")
+ focus = Focus.new("209.85.171.100")
  
- puts spotlight.location.coordinates
+ puts focus.location.coordinates
 
 == from a rails application
 
 === in config/environment
  
- require 'spotlight'
+ require 'focus'
  
 === in your controller
  
- @spotlight = Spotlight.new("209.85.171.100")
+ @focus = Focus.new("209.85.171.100")
  
 === in your view
 
- @spotlight.location.coordinates
+ @focus.location.coordinates
 
 == from a rails application with caching
 
@@ -58,18 +58,18 @@ Assumption: caching is already enabled and working.
 
 === in config/environment
  
- require 'spotlight'
+ require 'focus'
  
 === in your controller
  
  ip_address = "209.85.171.100"
- @spotlight = Rails.cache.fetch(Spotlight.key(ip_address), :expires_in => 1.weeks) do
-   Spotlight.new(ip_address)
+ @focus = Rails.cache.fetch(Spotlight.key(ip_address), :expires_in => 1.weeks) do
+   Focus.new(ip_address)
  end
  
 === in your view
 
- @spotlight.location.coordinates
+ @focus.location.coordinates
 
 = credits
 

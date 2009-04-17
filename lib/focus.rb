@@ -2,31 +2,26 @@ require 'rubygems'
 gem 'jnunemaker-httparty'
 require 'httparty'
 
-require File.dirname(__FILE__) + '/spotlight/data'
-require File.dirname(__FILE__) + '/spotlight/country'
-require File.dirname(__FILE__) + '/spotlight/location'
+require File.dirname(__FILE__) + '/focus/data'
+require File.dirname(__FILE__) + '/focus/country'
+require File.dirname(__FILE__) + '/focus/location'
  
-class Spotlight
+class Focus
   include HTTParty
   base_uri "api.hostip.info"
 
   attr_reader :ip
     
   def initialize(ip_address)
-    # validate ip_address format
-    raise unless Spotlight.valid?(ip_address)
-    # we are all clear, save the ip
+    raise unless Focus.valid?(ip_address)
     @ip = ip_address
-    # query hostip.info
-    self.shine
+    self.locate
     self
   end
 
   # generate a key from the ip_address
-  def self.key(ip_address, prefix="spotlight")
-    # validate ip_address format
+  def self.key(ip_address, prefix="focus")
     raise unless self.valid?(ip_address)
-    # all clear, generate the key
     segments = [prefix]
     # this ip_address does not need to be encoded as it is a valid
     # ip_address and only contains key-friendly chars
@@ -45,9 +40,7 @@ class Spotlight
   protected
   
   # actually query HostIP.info with the 'IP address'
-  # NOTE: 'shine' might not be the best name for the method, other possibles
-  # include: query, fetch, get, direct, ask, locate, target ... ???
-  def shine
+  def locate
     @result ||= self.class.get(
       "/",
       :query => {:ip => @ip},

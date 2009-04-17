@@ -1,19 +1,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{spotlight}
+  s.name = %q{focus}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mark G"]
   s.date = %q{2009-04-02}
-  s.default_executable = %q{spotlight}
-  s.email = %q{spotlight@attackcorp.com}
-  s.executables = ["spotlight"]
+  s.default_executable = %q{focus}
+  s.email = %q{focus@attackcorp.com}
+  s.executables = ["focus"]
   s.extra_rdoc_files = ["README.rdoc", "LICENSE"]
-  s.files = ["README.rdoc", "VERSION.yml", "bin/spotlight", "lib/spotlight", "lib/spotlight/country.rb", "lib/spotlight/data.rb", "lib/spotlight/location.rb", "lib/spotlight.rb", "spec/fixtures", "spec/fixtures/199_246_67_211.xml", "spec/spec_helper.rb", "spec/spotlight_spec.rb", "LICENSE"]
+  s.files = ["README.rdoc", "VERSION.yml", "bin/focus", "lib/focus", "lib/focus/country.rb", "lib/focus/data.rb", "lib/focus/location.rb", "lib/focus.rb", "spec/fixtures", "spec/fixtures/199_246_67_211.xml", "spec/spec_helper.rb", "spec/focus_spec.rb", "LICENSE"]
   s.has_rdoc = true
-  s.homepage = %q{http://github.com/attack/spotlight}
+  s.homepage = %q{http://github.com/attack/focu}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}

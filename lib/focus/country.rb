@@ -1,4 +1,4 @@
-class Spotlight
+class Focus
   class Country < Data
 
     def name

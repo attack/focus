@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+ 
+require File.dirname(__FILE__) + '/../lib/focus'
+#require 'rubygems'
+#require 'attack-focus'
+ 
+if ARGV.size == 0
+  puts 'Focus [Powered by hostip.info]'
+  puts 'USAGE: focus [ip_address]'
+  puts 'EXAMPLES:'
+  puts ' focus 209.85.171.100'
+  exit
+end
+ 
+focus = Focus.new(ARGV[0])
+
+puts "location -- name: #{focus.location.name}, latitude: #{focus.location.latitude}, longitude: #{focus.location.longitude}"
+puts "country  -- name: #{focus.country.name}, code: #{focus.country.code}"

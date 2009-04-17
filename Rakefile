@@ -4,10 +4,10 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "spotlight"
+    gem.name = "focus"
     gem.summary = %Q{TODO}
-    gem.email = "spotlight@attackcorp.com"
-    gem.homepage = "http://github.com/attack/spotlight"
+    gem.email = "focus@attackcorp.com"
+    gem.homepage = "http://github.com/attack/focus"
     gem.authors = ["Mark G"]
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -41,7 +41,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "spotlight #{version}"
+  rdoc.title = "focus #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

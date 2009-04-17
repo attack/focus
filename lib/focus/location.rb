@@ -1,4 +1,4 @@
-class Spotlight
+class Focus
   class Location < Data
   
     def name

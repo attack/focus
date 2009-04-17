@@ -1,4 +1,4 @@
-class Spotlight
+class Focus
   class Data
     attr_reader :data
 
